@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#FFFFFF"
+    android:gravity="center"> <!-- İçindekileri merkeze hizalar -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yeni Görev Oluştur"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="20dp"/>
+
+    <!-- Görev İsmi Kutucuğu -->
+    <EditText
+        android:id="@+id/etTaskName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Görev İsmi (Örn: Duş Al)"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Tarih Kutucuğu -->
+    <EditText
+        android:id="@+id/etTaskDate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Tarih (Örn: 16 Ekim)"
+        android:layout_marginBottom="12dp"/>
+
+    <!-- Saat Aralığı Kutucuğu -->
+    <EditText
+        android:id="@+id/etTaskTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Saat Aralığı (Örn: 10:00 - 11:00)"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Kaydet Butonu -->
+    <Button
+        android:id="@+id/btnSaveTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Görevi Ekle" />
+
+</LinearLayout>

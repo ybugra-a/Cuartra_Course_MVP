@@ -1,0 +1,50 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp">
+
+    <!-- Java'dan yeni yazılar ekleyebilmek için id verdik -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:text="Bugünün Planı"
+        android:textSize="26sp" />
+
+    <!-- Mevcut sayaç -->
+    <TextView
+        android:id="@+id/tvPlan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="40dp"
+        android:text="10:40 - 14:00 Ders\n16:00 - 18:00 Spor"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tvCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tamamlanan Görev: 0 / 2"
+        android:textSize="22sp"
+        android:layout_marginBottom="20dp" />
+
+    <!-- Mevcut tamamlama butonu -->
+    <Button
+        android:id="@+id/btnTap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:text="Görevi Tamamla" />
+
+    <!-- YENİ FONKSİYON: Yeni Görev Butonu -->
+    <Button
+        android:id="@+id/btnNewTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Yeni Görev Ekle" />
+
+</LinearLayout>
