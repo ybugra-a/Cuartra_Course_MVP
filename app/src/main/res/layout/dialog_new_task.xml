@@ -1,49 +1,136 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:padding="24dp"
-    android:background="#FFFFFF"
-    android:gravity="center"> <!-- İçindekileri merkeze hizalar -->
+    android:background="#1E1E2E"
+    android:padding="20dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Yeni Görev Oluştur"
-        android:textSize="22sp"
-        android:textStyle="bold"
-        android:layout_marginBottom="20dp"/>
-
-    <!-- Görev İsmi Kutucuğu -->
-    <EditText
-        android:id="@+id/etTaskName"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Görev İsmi (Örn: Duş Al)"
-        android:layout_marginBottom="12dp"/>
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
 
-    <!-- Tarih Kutucuğu -->
-    <EditText
-        android:id="@+id/etTaskDate"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Tarih (Örn: 16 Ekim)"
-        android:layout_marginBottom="12dp"/>
+        <TextView
+            android:id="@+id/tvDialogTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yeni Görev Oluştur"
+            android:textColor="#FFFFFF"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:layout_marginBottom="20dp" />
 
-    <!-- Saat Aralığı Kutucuğu -->
-    <EditText
-        android:id="@+id/etTaskTime"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Saat Aralığı (Örn: 10:00 - 11:00)"
-        android:layout_marginBottom="24dp"/>
+        <EditText
+            android:id="@+id/etTaskName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Görev İsmi (Örn: Spora Git)"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginBottom="12dp" />
 
-    <!-- Kaydet Butonu -->
-    <Button
-        android:id="@+id/btnSaveTask"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Görevi Ekle" />
+        <EditText
+            android:id="@+id/etTaskDesc"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Açıklama / Notlar (Opsiyonel)"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#888888"
+            android:backgroundTint="#FFFFFF"
+            android:layout_marginBottom="16dp" />
 
-</LinearLayout>
+        <!-- TARİH SEÇİM ALANI (Yatay) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tarih Aralığı"
+            android:textColor="#A0A0A0"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/etStartDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Başlangıç"
+                android:focusable="false"
+                android:clickable="true"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#555555"
+                android:backgroundTint="#FFFFFF"
+                android:layout_marginEnd="6dp" />
+
+            <EditText
+                android:id="@+id/etEndDate"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Bitiş"
+                android:focusable="false"
+                android:clickable="true"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#555555"
+                android:backgroundTint="#FFFFFF"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+
+        <!-- SAAT SEÇİM ALANI (Yatay) -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Saat Aralığı"
+            android:textColor="#A0A0A0"
+            android:textSize="14sp"
+            android:layout_marginBottom="4dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="24dp">
+
+            <EditText
+                android:id="@+id/etStartTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Başlangıç Saati"
+                android:focusable="false"
+                android:clickable="true"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#555555"
+                android:backgroundTint="#FFFFFF"
+                android:layout_marginEnd="6dp" />
+
+            <EditText
+                android:id="@+id/etEndTime"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="Bitiş Saati"
+                android:focusable="false"
+                android:clickable="true"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#555555"
+                android:backgroundTint="#FFFFFF"
+                android:layout_marginStart="6dp" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btnSaveTask"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Görevi Ekle"
+            android:backgroundTint="#7C4DFF"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>
